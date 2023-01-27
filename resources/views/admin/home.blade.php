@@ -1,3 +1,4 @@
-<x-app-layout>
+@extends('admin.app')
+@section('content')
 
-</x-app-layout>
+@endsection

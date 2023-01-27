@@ -20,6 +20,7 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/my.css">
 </head>
 <body>
 <div class="hero_area">
@@ -52,12 +53,24 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
+                        @if (Route::has('login'))
+                            @auth
+                                <li class="nav-item">
+                                    <form method="POST" action="{{ route('logout') }}" x-data>
+                                        @csrf
+                                        <input type="submit" value="logout">
+
+                                    </form>
+                                </li>
+                            @else
                         <li class="nav-item">
-                            <a class="btn btn-primary" href="contact.html">Login</a>
+                            <a class="btn btn-primary" href="{{route('login')}}" id="logincss">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-success" href="contact.html">Register</a>
+                            <a class="btn btn-success" href="{{route('register')}}">Register</a>
                         </li>
+                            @endauth
+                        @endif
                         <form class="form-inline">
                             <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                 <i class="fa fa-search" aria-hidden="true"></i>
