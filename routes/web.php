@@ -26,4 +26,5 @@ Route::middleware([
     })->name('dashboard');
 });
 route::get('/redirect',[HomeController::class,'redirect']);
-route::get('/view_category',[AdminController::class,'view_category']);
+route::get('/view_category',[AdminController::class,'view_category'])->name('view_category');
+route::post('/category/store',[AdminController::class,'store'])->name('admin.category.store');
