@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="admin/img/favicon.ico" rel="icon">
+    <link href="{{ asset("admin/img/favicon.ico") }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="admin/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="{{ asset("admin/lib/owlcarousel/assets/owl.carousel.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css") }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset("admin/css/bootstrap.min.css") }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="admin/css/style.css" rel="stylesheet">
+    <link href="{{ asset("admin/css/style.css") }}" rel="stylesheet">
 </head>
 
 <body>
@@ -50,7 +50,7 @@
             </a>
             <div class="d-flex align-items-center ms-4 mb-4">
                 <div class="position-relative">
-                    <img class="rounded-circle" src="admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                    <img class="rounded-circle" src="{{ asset("admin/img/user.jpg") }}" alt="" style="width: 40px; height: 40px;">
                     <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                 </div>
                 <div class="ms-3">
@@ -59,28 +59,18 @@
                 </div>
             </div>
             <div class="navbar-nav w-100">
+                <a href="{{url('redirect')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="{{url('view_category')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Категория</a>
-                <div class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
-                    <div class="dropdown-menu bg-transparent border-0">
-                        <a href="button.html" class="dropdown-item">Buttons</a>
-                        <a href="typography.html" class="dropdown-item">Typography</a>
-                        <a href="element.html" class="dropdown-item">Other Elements</a>
-                    </div>
-                </div>
-                <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
-                <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
-                <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                    <div class="dropdown-menu bg-transparent border-0">
-                        <a href="signin.html" class="dropdown-item">Sign In</a>
-                        <a href="signup.html" class="dropdown-item">Sign Up</a>
-                        <a href="404.html" class="dropdown-item">404 Error</a>
-                        <a href="blank.html" class="dropdown-item">Blank Page</a>
-                    </div>
-                </div>
+                <a href="{{url('view_product')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Продукти</a>
+                <a href="{{url('order')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Order</a>
+{{--                <div class="nav-item dropdown">--}}
+{{--                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>--}}
+{{--                    <div class="dropdown-menu bg-transparent border-0">--}}
+{{--                        <a href="button.html" class="dropdown-item">Buttons</a>--}}
+{{--                        <a href="typography.html" class="dropdown-item">Typography</a>--}}
+{{--                        <a href="element.html" class="dropdown-item">Other Elements</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </nav>
     </div>
@@ -94,7 +84,7 @@
                 <i class="fa fa-bars"></i>
             </a>
             <form class="d-none d-md-flex ms-4">
-                <input class="form-control border-0" type="search" placeholder="Search">
+                <input id="search" onkeyup="myFunction()" class="form-control border-0" type="text" placeholder="Search">
             </form>
             <div class="navbar-nav align-items-center ms-auto">
                 <div class="nav-item dropdown">
@@ -105,7 +95,7 @@
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                         <a href="#" class="dropdown-item">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle" src="admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                <img class="rounded-circle" src="{{ asset("admin/img/user.jpg") }}" alt="" style="width: 40px; height: 40px;">
                                 <div class="ms-2">
                                     <h6 class="fw-normal mb-0">Jhon send you a message</h6>
                                     <small>15 minutes ago</small>
@@ -115,7 +105,7 @@
                         <hr class="dropdown-divider">
                         <a href="#" class="dropdown-item">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle" src="admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                <img class="rounded-circle" src="{{ asset("admin/img/user.jpg") }}" alt="" style="width: 40px; height: 40px;">
                                 <div class="ms-2">
                                     <h6 class="fw-normal mb-0">Jhon send you a message</h6>
                                     <small>15 minutes ago</small>
@@ -125,7 +115,7 @@
                         <hr class="dropdown-divider">
                         <a href="#" class="dropdown-item">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle" src="admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                <img class="rounded-circle" src="{{ asset("admin/img/user.jpg") }}" alt="" style="width: 40px; height: 40px;">
                                 <div class="ms-2">
                                     <h6 class="fw-normal mb-0">Jhon send you a message</h6>
                                     <small>15 minutes ago</small>
@@ -162,7 +152,7 @@
                 </div>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        <img class="rounded-circle me-lg-2" src="admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle me-lg-2" src="{{ asset("admin/img/user.jpg") }}" alt="" style="width: 40px; height: 40px;">
                         <span class="d-none d-lg-inline-flex">John Doe</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
@@ -197,18 +187,18 @@
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="admin/lib/chart/chart.min.js"></script>
-<script src="admin/lib/easing/easing.min.js"></script>
-<script src="admin/lib/waypoints/waypoints.min.js"></script>
-<script src="admin/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="admin/lib/tempusdominus/js/moment.min.js"></script>
-<script src="admin/lib/tempusdominus/js/moment-timezone.min.js"></script>
-<script src="admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="{{ asset("admin/lib/chart/chart.min.js") }}"></script>
+<script src="{{ asset("admin/lib/easing/easing.min.js") }}"></script>
+<script src="{{ asset("admin/lib/waypoints/waypoints.min.js") }}"></script>
+<script src="{{ asset("admin/lib/owlcarousel/owl.carousel.min.js") }}"></script>
+<script src="{{ asset("admin/lib/tempusdominus/js/moment.min.js") }}"></script>
+<script src="{{ asset("admin/lib/tempusdominus/js/moment-timezone.min.js") }}"></script>
+<script src="{{ asset("admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js") }}"></script>
+<script src="{{ asset("https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js") }}" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 <!-- Template Javascript -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="admin/js/main.js"></script>
+<script src="{{ asset("admin/js/main.js") }}"></script>
 @yield('script')
 </body>
 

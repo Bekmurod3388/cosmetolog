@@ -60,13 +60,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                        @foreach($categories as $category)
-                            <tr>
-                                <td>{{$category->id}}</td>
-                                <td>{{$category->name}}</td>
-                                <td><button type="button" class="btn btn-warning"><i class="fas fa-pencil"></i>Изменить</button></td>
-                            </tr>
-                        @endforeach
+                    @foreach($categories as $category)
+                        <tr>
+                            <td>{{$category->id}}</td>
+                            <td>{{$category->name}}</td>
+                            <td>
+{{--                                <button type="button" class="btn btn-warning">--}}
+{{--                                    <i class="fas fa-pencil"></i>Изменить--}}
+{{--                                </button>--}}
+                                <a href="{{ route("admin.category.delete", $category->id) }}"
+                                   class="btn btn-danger">Удалить</a>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
@@ -79,7 +85,7 @@
         <script>
             Swal.fire(
                 '{{Session::get("message")}}',
-               'Выполнено успешно!',
+                'Выполнено успешно!',
                 'success'
             )
         </script>
