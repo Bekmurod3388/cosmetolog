@@ -2,14 +2,14 @@
     <div class="container">
         <div class="heading_container heading_center">
             <h2>
-                Our <span>products</span>
+                Наши <span>продукты</span>
             </h2>
             <br><br>
             <div>
                 <form action="{{ route('product_search') }}" method="get">
                     @csrf
-                    <input style="width: 500px;" type="text" name="search" placeholder="Search for Something">
-                    <input type="submit" value="search">
+                    <input style="width: 500px;" type="text" name="search" placeholder="Искать что-то">
+                    <input type="submit" value="поиск">
                 </form>
             </div>
         </div>
@@ -20,7 +20,7 @@
                         <div class="option_container">
                             <div class="options">
                                 <a href="{{ route('product_details', $product->id) }}" class="option1">
-                                    Product Details
+                                    Информация о продукте
                                 </a>
 {{--                                <a href="" class="option1">--}}
 {{--                                    Add To Cart--}}
@@ -32,7 +32,7 @@
                                             <input type="number" name="quantity" value="1" min="1" style="width: 100%">
                                         </div>
                                         <div class="col-md-4">
-                                            <input type="submit" value="Add To Cart">
+                                            <input type="submit" value="Добавить в корзину" style="padding-left: 5px; padding-right: 5px;">
                                         </div>
                                     </div>
                                 </form>
@@ -51,16 +51,16 @@
 
                             @if($product->discount_price != null)
                                 <h6 style="color: red">
-                                    Discount price<br>
+                                    Цена со скидкой<br>
                                     {{ $product->discount_price }}
                                 </h6>
                                 <h6 style="text-decoration: line-through; color: blue">
-                                    Price <br>
+                                    Цена <br>
                                     {{ $product->price }}
                                 </h6>
                             @else
                                 <h6 style="color: blue">
-                                    Price <br>
+                                    Цена <br>
                                     {{ $product->price }}
                                 </h6>
                             @endif

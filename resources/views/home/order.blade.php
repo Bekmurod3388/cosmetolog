@@ -12,13 +12,13 @@
         <div class="container mt-5">
             <table class="table table-bordered table-hover text-center">
                 <tr>
-                    <th>Product title</th>
-                    <th>Product quantity</th>
-                    <th>Price</th>
-                    <th>Payment Status</th>
-                    <th>Delivery Status</th>
-                    <th>Image</th>
-                    <th>Cancel Order</th>
+                    <th>Название продукта</th>
+                    <th>Количество продукта</th>
+                    <th>Цена</th>
+                    <th>Статус платежа</th>
+                    <th>О состоянии доставки</th>
+                    <th>Изображение</th>
+                    <th>Отменить заказ</th>
                 </tr>
                 @foreach($orders as $item)
                     <tr>
@@ -40,12 +40,12 @@
                             @if($item->delivery_status == "processing")
                                 <form action="{{ route('cancel_order', $item->id) }}">
                                     @csrf
-                                    <button class="show_confirm btn btn-danger">Cancel Order</button>
+                                    <button class="show_confirm btn btn-danger">Отменить заказ</button>
                                 </form>
 {{--                                <a onclick="return confirm('Are you Sure to Cancel this order!!!')"--}}
 {{--                               href="{{ route('cancel_order', $item->id) }}" class="btn btn-danger">Cancel Order</a>--}}
                             @else
-                                <p style="color: blue">Not Allowed</p>
+                                <p style="color: blue">Не допускается</p>
                             @endif
                         </td>
                     </tr>

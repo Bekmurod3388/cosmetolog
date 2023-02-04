@@ -47,9 +47,9 @@
                         <a href="#"><img width="210" src="{{ asset('assets/images/logo.png') }}" alt="#"/></a>
                     </div>
                     <div class="information_f">
-                        <p><strong>ADDRESS:</strong> 28 White tower, Street Name New York City, USA</p>
-                        <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
-                        <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                        <p><strong>АДРЕС:</strong> 28 Белая башня, название улицы Нью-Йорк, США</p>
+                        <p><strong>ТЕЛЕФОН:</strong> +998 97 777 88 99</p>
+                        <p><strong>ЭЛЕКТРОННАЯ ПОЧТА:</strong>urgench_cosmetolog@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="widget_menu">
-                                    <h3>Menu</h3>
+                                    <h3>Меню</h3>
                                     <ul>
                                         <li><a href="#">Home</a></li>
                                         <li><a href="#">About</a></li>

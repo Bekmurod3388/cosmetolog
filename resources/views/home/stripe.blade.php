@@ -9,13 +9,13 @@
 
         <div class="container">
 
-            <p class="text-center" style="font-size: 24px">Pay Using Your Card</p>
+            <p class="text-center" style="font-size: 24px">Оплата картой</p>
 
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="panel panel-default credit-card-box">
                         <div class="panel-heading display-table">
-                            <p class="panel-title" >Payment Details</p>
+                            <p class="panel-title" >Детали оплаты</p>
                         </div>
                         <div class="panel-body">
 
@@ -38,14 +38,14 @@
 
                                 <div class='form-row row'>
                                     <div class='col-xs-12 form-group required'>
-                                        <label class='control-label'>Name on Card</label> <input
+                                        <label class='control-label'>Имя на карте</label> <input
                                             class='form-control' size='4' type='text'>
                                     </div>
                                 </div>
 
                                 <div class='form-row row'>
                                     <div class='col-xs-12 form-group card required'>
-                                        <label class='control-label'>Card Number</label> <input
+                                        <label class='control-label'>Номер карты</label> <input
                                             autocomplete='off' class='form-control card-number' size='20'
                                             type='text'>
                                     </div>
@@ -58,12 +58,12 @@
                                                                                         type='text'>
                                     </div>
                                     <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                        <label class='control-label'>Expiration Month</label> <input
+                                        <label class='control-label'>Месяц срока действия</label> <input
                                             class='form-control card-expiry-month' placeholder='MM' size='2'
                                             type='text'>
                                     </div>
                                     <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                        <label class='control-label'>Expiration Year</label> <input
+                                        <label class='control-label'>Год срока действия</label> <input
                                             class='form-control card-expiry-year' placeholder='YYYY' size='4'
                                             type='text'>
                                     </div>
@@ -71,14 +71,14 @@
 
                                 <div class='form-row row'>
                                     <div class='col-md-12 error form-group hide'>
-                                        <div class='alert-danger alert'>Please correct the errors and try
-                                            again.</div>
+                                        <div class='alert-danger alert'>Пожалуйста, исправьте ошибки и попробуйте
+                                             снова.</div>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <input type="submit" value="Pay Now (${{ $totalprice }})">
+                                        <input type="submit" value="Заплатить сейчас (${{ $totalprice }})">
 {{--                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now (${{ $totalprice }})</button>--}}
                                     </div>
                                 </div>

@@ -11,17 +11,17 @@
                             <div class="detail-box">
                                 <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Распродажа со скидкой 20%
                                     </span>
                                     <br>
-                                    On Everything
+                                    Обо всем
                                 </h1>
                                 <p>
                                     Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
                                 </p>
                                 <div class="btn-box">
                                     <a href="" class="btn1">
-                                        Shop Now
+                                        Купить сейчас
                                     </a>
                                 </div>
                             </div>
@@ -36,17 +36,17 @@
                             <div class="detail-box">
                                 <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Распродажа со скидкой 20%
                                     </span>
                                     <br>
-                                    On Everything
+                                    Обо всем
                                 </h1>
                                 <p>
                                     Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
                                 </p>
                                 <div class="btn-box">
                                     <a href="" class="btn1">
-                                        Shop Now
+                                        Купить сейчас
                                     </a>
                                 </div>
                             </div>
@@ -61,17 +61,17 @@
                             <div class="detail-box">
                                 <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Распродажа со скидкой 20%
                                     </span>
                                     <br>
-                                    On Everything
+                                    Обо всем
                                 </h1>
                                 <p>
                                     Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
                                 </p>
                                 <div class="btn-box">
                                     <a href="" class="btn1">
-                                        Shop Now
+                                        Купить сейчас
                                     </a>
                                 </div>
                             </div>

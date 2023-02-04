@@ -3,7 +3,7 @@
         <div class="container">
             <div class="heading_container heading_center">
                 <h2>
-                    Why Shop With Us
+                    Почему делать покупки у нас
                 </h2>
             </div>
             <div class="row">
@@ -98,10 +98,10 @@
                         </div>
                         <div class="detail-box">
                             <h5>
-                                Fast Delivery
+                                Быстрая доставка
                             </h5>
                             <p>
-                                variations of passages of Lorem Ipsum available
+                                доступны вариации пассажей Lorem Ipsum
                             </p>
                         </div>
                     </div>
@@ -213,10 +213,10 @@
                         </div>
                         <div class="detail-box">
                             <h5>
-                                Free Shiping
+                                Бесплатная доставка
                             </h5>
                             <p>
-                                variations of passages of Lorem Ipsum available
+                                доступны вариации пассажей Lorem Ipsum
                             </p>
                         </div>
                     </div>
@@ -234,10 +234,10 @@
                         </div>
                         <div class="detail-box">
                             <h5>
-                                Best Quality
+                                Лучшее качество
                             </h5>
                             <p>
-                                variations of passages of Lorem Ipsum available
+                                доступны вариации пассажей Lorem Ipsum
                             </p>
                         </div>
                     </div>

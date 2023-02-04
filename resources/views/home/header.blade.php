@@ -8,22 +8,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url("/") }}">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{ url("/") }}">Главная <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('product') }}">Products</a>
+                        <a class="nav-link" href="{{ route('product') }}">Продукты</a>
+                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="blog_list.html">Blog</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="contact.html">Contact</a>--}}
+{{--                    </li>--}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('show_cart') }}">Корзина</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog_list.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('show_cart') }}">Cart</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('show_order') }}">Order</a>
+                        <a class="nav-link" href="{{ route('show_order') }}">Заказ</a>
                     </li>
                     @if (Route::has('login'))
                         @auth

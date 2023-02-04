@@ -62,7 +62,7 @@
                 <a href="{{url('redirect')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="{{url('view_category')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Категория</a>
                 <a href="{{url('view_product')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Продукти</a>
-                <a href="{{url('order')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Order</a>
+                <a href="{{url('order')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Заказ</a>
 {{--                <div class="nav-item dropdown">--}}
 {{--                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>--}}
 {{--                    <div class="dropdown-menu bg-transparent border-0">--}}

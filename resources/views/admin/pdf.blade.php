@@ -1,20 +1,25 @@
 <html>
 <head>
-    <title>Order PDF</title>
+    <title>Заказать PDF</title>
+    <style>
+        *{
+            font-family: "DejaVu Sans", sans-serif;
+        }
+    </style>
 </head>
 <body>
-<h1>Product Details</h1>
-Customer Name: <h3> {{ $order->user->name }}</h3>
-Customer email: <h3> {{ $order->user->email }}</h3>
-Customer phone: <h3> {{ $order->user->phone }}</h3>
-Customer address: <h3> {{ $order->user->address }}</h3>
-Customer id: <h3> {{ $order->user->id }}</h3>
-Product Name: <h3> {{ $order->product->title }}</h3>
-Product price: <h3> {{ $order->price }}</h3>
-Product Quantity: <h3> {{ $order->quantity }}</h3>
-Product Status: <h3> {{ $order->payment_status }}</h3>
-Product id: <h3> {{ $order->product_id }}</h3>
+<h1>Информация о продукте</h1>
+Имя клиента: <h3> {{ $order->user->name }}</h3>
+Электронная почта клиента: <h3> {{ $order->user->email }}</h3>
+Телефон клиента: <h3> {{ $order->user->phone }}</h3>
+Адрес клиента: <h3> {{ $order->user->address }}</h3>
+Пользовательский ИД: <h3> {{ $order->user->id }}</h3>
+Наименование товара: <h3> {{ $order->product->title }}</h3>
+Цена продукта: <h3> {{ $order->price }}</h3>
+Количество продукта: <h3> {{ $order->quantity }}</h3>
+Статус продукта: <h3> {{ $order->payment_status }}</h3>
+Код товара: <h3> {{ $order->product_id }}</h3>
 {{--<p>product/{{$order->product->image}}</p>--}}
-<img height="250" width="450" src="{{ 'product/'.$order->product->image}}" alt="">
+<img height="200" width="400" src="{{ 'product/'.$order->product->image}}" alt="">
 </body>
 </html>
