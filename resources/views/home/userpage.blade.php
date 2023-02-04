@@ -27,10 +27,10 @@
 
 
     <!-- subscribe section -->
-    @include('home.subscribe')
+{{--    @include('home.subscribe')--}}
     <!-- end subscribe section -->
     <!-- client section -->
-    @include('home.client')
+{{--    @include('home.client')--}}
     <!-- end client section -->
 
     <script type="text/javascript">
@@ -45,13 +45,13 @@
         }
     </script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            var scrollpos = localStorage.getItem("scrollpos");
-            if (scrollpos) window.scrollTo(0, scrollpos)
-        })
-        window.onbeforeunload = function (e) {
-            localStorage.setItem("scrollpos", window.scrollY);
-        }
-    </script>
+{{--    <script>--}}
+{{--        document.addEventListener("DOMContentLoaded", function (event) {--}}
+{{--            var scrollpos = localStorage.getItem("scrollpos");--}}
+{{--            if (scrollpos) window.scrollTo(0, scrollpos)--}}
+{{--        })--}}
+{{--        window.onbeforeunload = function (e) {--}}
+{{--            localStorage.setItem("scrollpos", window.scrollY);--}}
+{{--        }--}}
+{{--    </script>--}}
 @endsection

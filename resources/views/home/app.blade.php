@@ -41,68 +41,66 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="full">
                     <div class="logo_footer">
                         <a href="#"><img width="210" src="{{ asset('assets/images/logo.png') }}" alt="#"/></a>
                     </div>
                     <div class="information_f">
-                        <p><strong>АДРЕС:</strong> 28 Белая башня, название улицы Нью-Йорк, США</p>
-                        <p><strong>ТЕЛЕФОН:</strong> +998 97 777 88 99</p>
-                        <p><strong>ЭЛЕКТРОННАЯ ПОЧТА:</strong>urgench_cosmetolog@gmail.com</p>
+                        <p><strong>АДРЕС: </strong> 28 Белая башня, название улицы Нью-Йорк, США</p>
+                        <p><strong>ТЕЛЕФОН: </strong> +998 97 777 88 99</p>
+                        <p><strong>ЭЛЕКТРОННАЯ ПОЧТА: </strong>urgench_cosmetolog@gmail.com</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="widget_menu">
                                     <h3>Меню</h3>
                                     <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Testimonial</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="{{ route('welcome') }}">Главная</a></li>
+                                        <li><a href="{{ route('product') }}">Продукты</a></li>
+                                        <li><a href="{{ route('show_cart') }}">Корзина</a></li>
+                                        <li><a href="{{ route('show_order') }}">Заказ</a></li>
+{{--                                        <li><a href="#">Blog</a></li>--}}
+{{--                                        <li><a href="#">Contact</a></li>--}}
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="widget_menu">
-                                    <h3>Account</h3>
+                                    <h3>Профиль</h3>
                                     <ul>
-                                        <li><a href="#">Account</a></li>
-                                        <li><a href="#">Checkout</a></li>
-                                        <li><a href="#">Login</a></li>
-                                        <li><a href="#">Register</a></li>
-                                        <li><a href="#">Shopping</a></li>
-                                        <li><a href="#">Widget</a></li>
+                                        <li><a href="{{ route('redirect') }}">Профиль</a></li>
+                                        <li><a href="{{ route('login') }}">Войти</a></li>
+                                        <li><a href="{{ route('register') }}">Регистрация</a></li>
+                                        <li><a href="{{ route('product') }}">Покупка</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <div class="widget_menu">
-                            <h3>Newsletter</h3>
-                            <div class="information_f">
-                                <p>Subscribe by our newsletter and get update protidin.</p>
-                            </div>
-                            <div class="form_sub">
-                                <form>
-                                    <fieldset>
-                                        <div class="field">
-                                            <input type="email" placeholder="Enter Your Mail" name="email"/>
-                                            <input type="submit" value="Subscribe"/>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+{{--                    <div class="col-md-5">--}}
+{{--                        <div class="widget_menu">--}}
+{{--                            <h3>Newsletter</h3>--}}
+{{--                            <div class="information_f">--}}
+{{--                                <p>Subscribe by our newsletter and get update protidin.</p>--}}
+{{--                            </div>--}}
+{{--                            <div class="form_sub">--}}
+{{--                                <form>--}}
+{{--                                    <fieldset>--}}
+{{--                                        <div class="field">--}}
+{{--                                            <input type="email" placeholder="Enter Your Mail" name="email"/>--}}
+{{--                                            <input type="submit" value="Subscribe"/>--}}
+{{--                                        </div>--}}
+{{--                                    </fieldset>--}}
+{{--                                </form>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -125,12 +123,12 @@
         var name = $(this).data("name");
         event.preventDefault();
         swal({
-            title: `Haqiqatan ham bu yozuvni oʻchirib tashlamoqchimisiz?`,
-            text: "Agar siz buni o'chirib tashlasangiz, u abadiy yo'qoladi.",
+            title: `Вы уверены, что хотите удалить эту запись?`,
+            text: "Если вы удалите это, оно исчезнет навсегда.",
             icon: "warning",
             buttons: true,
             dangerMode: true,
-            buttons: ['Yo`q', 'Ha']
+            buttons: ['Нет', 'Да']
         }).then((willDelete) => {
             if (willDelete) {
                 form.submit();

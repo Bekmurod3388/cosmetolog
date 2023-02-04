@@ -11,17 +11,17 @@
                             <div class="detail-box">
                                 <h1>
                                     <span>
-                                    Распродажа со скидкой 20%
+                                    BIOXSINE
                                     </span>
                                     <br>
-                                    Обо всем
+{{--                                    BOTANICAL LABORATORIES--}}
                                 </h1>
                                 <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                    Продукция на основе трав для ухода за волосами и кожей
                                 </p>
                                 <div class="btn-box">
                                     <a href="" class="btn1">
-                                        Купить сейчас
+                                        Подробности
                                     </a>
                                 </div>
                             </div>
@@ -36,17 +36,17 @@
                             <div class="detail-box">
                                 <h1>
                                     <span>
-                                    Распродажа со скидкой 20%
+                                    1 - 14 ФЕВРАЛЯ
                                     </span>
                                     <br>
-                                    Обо всем
+{{--                                    Обо всем--}}
                                 </h1>
                                 <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                    Совершите покупки на сумму от 500 лей в магазинах Cosmetic Shop и получите сертификат на 100 лей от
                                 </p>
                                 <div class="btn-box">
                                     <a href="" class="btn1">
-                                        Купить сейчас
+                                        Получить
                                     </a>
                                 </div>
                             </div>
@@ -61,17 +61,17 @@
                             <div class="detail-box">
                                 <h1>
                                     <span>
-                                    Распродажа со скидкой 20%
+                                    СКРАБЫ
                                     </span>
                                     <br>
-                                    Обо всем
+{{--                                    Обо всем--}}
                                 </h1>
                                 <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                    Которые сделают твою кожу гладкой и шелковистой
                                 </p>
                                 <div class="btn-box">
                                     <a href="" class="btn1">
-                                        Купить сейчас
+                                        ХОЧУ
                                     </a>
                                 </div>
                             </div>

@@ -32,7 +32,7 @@
 </head>
 
 <body>
-<div class="container-xxl position-relative bg-white d-flex p-0">
+{{--<div class="container-xxl position-relative bg-white d-flex p-0">--}}
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="navbar-nav w-100">
-                <a href="{{url('redirect')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                <a href="{{url('redirect')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Статистика</a>
                 <a href="{{url('view_category')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Категория</a>
                 <a href="{{url('view_product')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Продукти</a>
                 <a href="{{url('order')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Заказ</a>
@@ -171,6 +171,7 @@
                 </div>
             </div>
         </nav>
+        <br>
     @yield('content')
 
     <!-- Footer Start -->
@@ -182,7 +183,7 @@
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-</div>
+{{--</div>--}}
 
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',[HomeController::class,'index']);
+Route::get('/',[HomeController::class,'index'])->name('welcome');
 
 Route::middleware([
     'auth:sanctum',
@@ -25,7 +25,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-route::get('/redirect',[HomeController::class,'redirect'])->middleware('auth', 'verified');
+route::get('/redirect',[HomeController::class,'redirect'])->middleware('auth', 'verified')->name('redirect');
 route::get('/view_category',[AdminController::class,'view_category'])->name('view_category');
 route::post('/category/store',[AdminController::class,'store'])->name('admin.category.store');
 Route::get("/delete_category/{id}", [AdminController::class, 'delete_category'])->name('admin.category.delete');

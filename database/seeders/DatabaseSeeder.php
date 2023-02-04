@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,6 +16,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+           'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'usertype' => 1,
+            'phone' => '',
+            'address' => '',
+            'password' => Hash::make('admin'),
+            'email_verified_at' => now()->timezone('Asia/Tashkent')
+        ]);
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

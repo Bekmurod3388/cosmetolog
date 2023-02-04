@@ -18,13 +18,13 @@
                     <thead>
                     <tr>
 {{--                        <th>ID</th>--}}
-                        <th>title</th>
-                        <th>Description</th>
-                        <th>Quantity</th>
-                        <th>Category</th>
-                        <th>Price</th>
-                        <th>Discount Price</th>
-                        <th>Image</th>
+                        <th>Название</th>
+                        <th>Описание</th>
+                        <th>Количество</th>
+                        <th>Категория</th>
+                        <th>Цена</th>
+                        <th>Цена со скидкой</th>
+                        <th>Изображение</th>
                         <th>Действие</th>
                     </tr>
                     </thead>

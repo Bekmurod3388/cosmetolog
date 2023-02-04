@@ -19,19 +19,19 @@
                 <table id="myTable" class="table table-hover w-100">
                     <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Имя</th>
                         {{--                        <th>Email</th>--}}
-                        <th>Address</th>
-                        <th>Phone</th>
-                        <th>Product title</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Payment Status</th>
-                        <th>Delivery</th>
-                        <th>Image</th>
-                        <th>Delivered</th>
-                        <th>Print PDF</th>
-                        <th>Send Email</th>
+                        <th>Адрес</th>
+                        <th>Телефон</th>
+                        <th>Название продукта</th>
+                        <th>Количество</th>
+                        <th>Цена</th>
+                        <th>Статус платежа</th>
+                        <th>Доставка</th>
+                        <th>Изображение</th>
+                        <th>Доставлено</th>
+                        <th>Распечатать PDF</th>
+                        <th>Отправить письмо</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -43,26 +43,26 @@
                             <td>{{ $item->user->phone }}</td>
                             <td>{{ $item->product->title }}</td>
                             <td>{{ $item->quantity }}</td>
-                            <td>{{ $item->price }}</td>
+                            <td>{{ $item->price * $item->quantity}}</td>
                             <td>{{ $item->payment_status }}</td>
                             <td>{{ $item->delivery_status }}</td>
                             <td>
                                 <img style="width: 100%" src="{{ asset('product/'.$item->product->image) }}" alt="">
                             </td>
                             <td>
-                                @if($item->delivery_status == "processing")
+                                @if($item->delivery_status == "обработка")
                                     <a href="{{ route('delivered', $item->id) }}"
-                                       onclick="return confirm('Are you sure this product is delivered!!!')"
-                                       class="btn btn-primary">Delivered</a>
+                                       onclick="return confirm('Вы уверены, что этот товар доставлен!!!')"
+                                       class="btn btn-primary">Доставлено</a>
                                 @else
-                                    <p>Delivered</p>
+                                    <p>Доставлено</p>
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ route('print_pdf', $item->id) }}" class="btn btn-secondary">Print PDF</a>
+                                <a href="{{ route('print_pdf', $item->id) }}" class="btn btn-secondary">Распечатать PDF</a>
                             </td>
                             <td>
-                                <a href="{{ route('send_email', $item->id) }}" class="btn btn-info">Send Email</a>
+                                <a href="{{ route('send_email', $item->id) }}" class="btn btn-info">Отправить письмо</a>
                             </td>
                         </tr>
                     @endforeach

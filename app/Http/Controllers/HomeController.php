@@ -33,10 +33,10 @@ class HomeController extends Controller
             $order = Order::all();
             $total_revenue = 0;
             foreach ($order as $item){
-                $total_revenue += $item->price;
+                $total_revenue += $item->price * $item->quantity;
             }
-            $total_delivered = Order::where("delivery_status", "delivered")->count();
-            $total_processing = Order::where("delivery_status", "processing")->count();
+            $total_delivered = Order::where("delivery_status", "доставлено")->sum('quantity');
+            $total_processing = Order::where("delivery_status", "обработка")->sum('quantity');
             return view('admin.home', [
                 'total_product' => $total_product,
                 'total_order' => $total_order,
@@ -76,8 +76,8 @@ class HomeController extends Controller
                 $cart->quantity = $request->quantity;
                 $cart->save();
             }
-            Alert::success('Product Added Successfully', 'We have added product to the cart');
-            return redirect()->back()->with('message', 'Product Added Successfully');
+            Alert::success('Продукт успешно добавлен', 'Мы добавили товар в корзину');
+            return redirect()->back();
         }
         else {
             return redirect('login');
@@ -97,7 +97,7 @@ class HomeController extends Controller
     }
     public function remove_cart($id){
         Cart::find($id)->delete();
-        Alert::warning('Product Deleted Successfully', 'We have deleted product to the cart');
+        Alert::warning('Продукт успешно удален', 'Мы удалили товар в корзину');
         return redirect()->back();
     }
 
@@ -113,13 +113,13 @@ class HomeController extends Controller
             $order->product_id = $item->product_id;
             $order->price = $price;
             $order->quantity = $item->quantity;
-            $order->payment_status = "cash on delivery";
-            $order->delivery_status = "processing";
+            $order->payment_status = "оплата при доставке";
+            $order->delivery_status = "обработка";
             $order->save();
 
             Cart::find($item->id)->delete();
         }
-        Alert::success('Successfully', 'We have cash on delivery product to the cart');
+        Alert::success('Успешно', 'У нас есть наложенный платеж в корзину');
         return redirect()->back();
     }
 
@@ -149,14 +149,14 @@ class HomeController extends Controller
             $order->product_id = $item->product_id;
             $order->price = $price;
             $order->quantity = $item->quantity;
-            $order->payment_status = "paid";
-            $order->delivery_status = "processing";
+            $order->payment_status = "оплачено";
+            $order->delivery_status = "обработка";
             $order->save();
 
             Cart::find($item->id)->delete();
         }
 
-        Session::flash('success', 'Payment successful!');
+        Session::flash('success', 'Оплата прошла успешно!');
 
         return back();
     }
@@ -175,7 +175,7 @@ class HomeController extends Controller
 
     public function cancel_order($id){
         $order = Order::find($id);
-        $order->delivery_status = "canceled";
+        $order->delivery_status = "отмена";
         $order->save();
         return redirect()->back();
     }

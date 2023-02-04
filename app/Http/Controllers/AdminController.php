@@ -89,8 +89,8 @@ class AdminController extends Controller
 
     public function delivered($id){
         $order = Order::find($id);
-        $order->delivery_status = "delivered";
-        $order->payment_status = "paid";
+        $order->delivery_status = "доставлено";
+        $order->payment_status = "оплачено";
         $order->save();
         return redirect()->back()->with('success', "");
     }

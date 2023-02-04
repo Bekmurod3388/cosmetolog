@@ -14,22 +14,22 @@
                     </h5>
                     @if($product->discount_price != null)
                         <h6 style="color: red">
-                            Discount price<br>
+                            Цена со скидкой<br>
                             {{ $product->discount_price }}
                         </h6>
                         <h6 style="text-decoration: line-through; color: blue">
-                            Price <br>
+                            Цена <br>
                             {{ $product->price }}
                         </h6>
                     @else
                         <h6 style="color: blue">
-                            Price <br>
+                            Цена <br>
                             {{ $product->price }}
                         </h6>
                     @endif
-                    <h6>Product Category : {{ $product->category }}</h6>
-                    <h6>Product Details : {{ $product->description }}</h6>
-                    <h6>Available Quantity : {{ $product->quantity }}</h6>
+                    <h6>Категория продукта : {{ $product->category }}</h6>
+                    <h6>Информация о продукте : {{ $product->description }}</h6>
+                    <h6>Доступное количество : {{ $product->quantity }}</h6>
 
                     <form action="{{ route('add_cart', $product->id) }}" method="post">
                         @csrf
@@ -38,7 +38,7 @@
                                 <input type="number" name="quantity" value="1" min="1" style="width: 100%">
                             </div>
                             <div class="col-md-4">
-                                <input type="submit" value="Add To Cart">
+                                <input type="submit" value="Добавить в корзину">
                             </div>
                         </div>
                     </form>

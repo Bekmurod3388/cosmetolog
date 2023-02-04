@@ -7,10 +7,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url("/") }}">Главная <span class="sr-only">(current)</span></a>
+                    <li class="nav-item @if(request()->routeIs('welcome')) active @endif">
+                        <a class="nav-link" href="{{ route("welcome") }}">Главная</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @if(request()->routeIs('product')) active @endif">
                         <a class="nav-link" href="{{ route('product') }}">Продукты</a>
                     </li>
 {{--                    <li class="nav-item">--}}
@@ -19,10 +19,10 @@
 {{--                    <li class="nav-item">--}}
 {{--                        <a class="nav-link" href="contact.html">Contact</a>--}}
 {{--                    </li>--}}
-                    <li class="nav-item">
+                    <li class="nav-item @if(request()->routeIs('show_cart')) active @endif">
                         <a class="nav-link" href="{{ route('show_cart') }}">Корзина</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @if(request()->routeIs('show_order')) active @endif">
                         <a class="nav-link" href="{{ route('show_order') }}">Заказ</a>
                     </li>
                     @if (Route::has('login'))
@@ -30,24 +30,24 @@
                             <li class="nav-item">
                                 <form method="POST" action="{{ route('logout') }}" x-data>
                                     @csrf
-                                    <input type="submit" value="logout">
+                                    <input type="submit" value="Выйти">
 
                                 </form>
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="btn btn-primary" href="{{route('login')}}" id="logincss">Login</a>
+                                <a class="btn btn-primary" href="{{route('login')}}" id="logincss">Войти</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn btn-success" href="{{route('register')}}">Register</a>
+                                <a class="btn btn-success" href="{{route('register')}}">Регистрация</a>
                             </li>
                         @endauth
                     @endif
-                    <form class="form-inline">
-                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </form>
+{{--                    <form class="form-inline">--}}
+{{--                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">--}}
+{{--                            <i class="fa fa-search" aria-hidden="true"></i>--}}
+{{--                        </button>--}}
+{{--                    </form>--}}
                 </ul>
             </div>
         </nav>
