@@ -11,7 +11,7 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="">
-    <title>Famms - Fashion HTML Template</title>
+    <title>Магазин косметики и парфюмерии в Ургенче</title>
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}"/>
     <!-- font awesome style -->
@@ -47,7 +47,7 @@
                         <a href="#"><img width="210" src="{{ asset('assets/images/logo.png') }}" alt="#"/></a>
                     </div>
                     <div class="information_f">
-                        <p><strong>АДРЕС: </strong> 28 Белая башня, название улицы Нью-Йорк, США</p>
+                        <p><strong>АДРЕС: </strong> Хорезмская область, г. Ургенч, ул. аль-Хоразми 45</p>
                         <p><strong>ТЕЛЕФОН: </strong> +998 97 777 88 99</p>
                         <p><strong>ЭЛЕКТРОННАЯ ПОЧТА: </strong>urgench_cosmetolog@gmail.com</p>
                     </div>

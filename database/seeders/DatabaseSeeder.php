@@ -17,12 +17,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::create([
-           'name' => 'admin',
+           'name' => 'Админ',
             'email' => 'admin@gmail.com',
             'usertype' => 1,
             'phone' => '',
             'address' => '',
-            'password' => Hash::make('admin'),
+            'password' => Hash::make('admin123'),
             'email_verified_at' => now()->timezone('Asia/Tashkent')
         ]);
 
