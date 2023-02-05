@@ -44,7 +44,10 @@
             <div class="col-md-6">
                 <div class="full">
                     <div class="logo_footer">
-                        <a href="#"><img width="210" src="{{ asset('assets/images/logo.png') }}" alt="#"/></a>
+                        <a class="nav-link" href="{{ url("/") }}" style="color: black; font-size: 30px; font-weight: bold">
+                            Cosmetic Shop
+                            {{--                <img width="250" src="{{ asset('assets/images/logo.png') }}" alt="#" />--}}
+                        </a>
                     </div>
                     <div class="information_f">
                         <p><strong>АДРЕС: </strong> Хорезмская область, г. Ургенч, ул. аль-Хоразми 45</p>
