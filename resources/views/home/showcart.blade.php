@@ -25,12 +25,12 @@
                         <td>{{ $item->quantity }}</td>
                         <td>
                             @if($item->product->discount_price != null)
-                                {{ $item->product->discount_price }} /
-                                {{ $item->product->discount_price * $item->quantity }}
+                                {{ $item->product->discount_price }}$ /
+                                {{ $item->product->discount_price * $item->quantity }}$
                                 <?php $total_price += $item->quantity * $item->product->discount_price ?>
                             @else
-                                {{ $item->product->price }} /
-                                {{ $item->product->price * $item->quantity }}
+                                {{ $item->product->price }}$ /
+                                {{ $item->product->price * $item->quantity }}$
                                 <?php $total_price += $item->quantity * $item->product->price ?>
                             @endif
                         </td>
@@ -46,7 +46,7 @@
                     </tr>
                 @endforeach
             </table>
-            <p class="text-center">Итоговая цена: {{ $total_price }}</p>
+            <p class="text-center">Итоговая цена: {{ $total_price }}$</p>
             <div class="text-center mt-5">
                 <p>Перейти к заказу</p>
                 <a href="{{ route('cash_order') }}" class="btn btn-danger">Оплата при доставке</a>

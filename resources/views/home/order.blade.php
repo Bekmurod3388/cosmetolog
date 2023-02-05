@@ -26,9 +26,9 @@
                         <td>{{ $item->quantity }}</td>
                         <td>
                             @if($item->product->discount_price != null)
-                                {{ $item->product->discount_price * $item->quantity }}
+                                {{ $item->product->discount_price * $item->quantity }}$
                             @else
-                                {{ $item->product->price * $item->quantity }}
+                                {{ $item->product->price * $item->quantity }}$
                             @endif
                         </td>
                         <td>{{ $item->payment_status }}</td>

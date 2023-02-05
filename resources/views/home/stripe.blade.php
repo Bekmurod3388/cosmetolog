@@ -78,7 +78,7 @@
 
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <input type="submit" value="Заплатить сейчас (${{ $totalprice }})">
+                                        <input type="submit" value="Заплатить сейчас ({{ $totalprice }}$)">
 {{--                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now (${{ $totalprice }})</button>--}}
                                     </div>
                                 </div>

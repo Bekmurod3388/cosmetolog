@@ -28,7 +28,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="discount_price">Цена со скидкой</label>
-                        <input type="text" class="form-control" name="discount_price" id="discount_price" required>
+                        <input type="text" class="form-control" name="discount_price" id="discount_price">
                     </div>
                     <div class="mt-4">
                         <label for="quantity">Количество продукта</label>

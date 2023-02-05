@@ -43,7 +43,7 @@
                             <td>{{ $item->user->phone }}</td>
                             <td>{{ $item->product->title }}</td>
                             <td>{{ $item->quantity }}</td>
-                            <td>{{ $item->price * $item->quantity}}</td>
+                            <td>{{ $item->price * $item->quantity}}$</td>
                             <td>{{ $item->payment_status }}</td>
                             <td>{{ $item->delivery_status }}</td>
                             <td>
