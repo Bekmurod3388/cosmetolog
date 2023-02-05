@@ -37,7 +37,7 @@
                             <img style="height: 100px" src="{{ asset('product/'.$item->product->image) }}" alt="">
                         </td>
                         <td>
-                            @if($item->delivery_status == "processing")
+                            @if($item->delivery_status == "обработка")
                                 <form action="{{ route('cancel_order', $item->id) }}">
                                     @csrf
                                     <button class="show_confirm btn btn-danger">Отменить заказ</button>
