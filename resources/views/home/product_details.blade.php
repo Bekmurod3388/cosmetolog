@@ -15,16 +15,16 @@
                     @if($product->discount_price != null)
                         <h6 style="color: red">
                             Цена со скидкой<br>
-                            {{ $product->discount_price }}
+                            {{ $product->discount_price }}$
                         </h6>
                         <h6 style="text-decoration: line-through; color: blue">
                             Цена <br>
-                            {{ $product->price }}
+                            {{ $product->price }}$
                         </h6>
                     @else
                         <h6 style="color: blue">
                             Цена <br>
-                            {{ $product->price }}
+                            {{ $product->price }}$
                         </h6>
                     @endif
                     <h6>Категория продукта : {{ $product->category }}</h6>
